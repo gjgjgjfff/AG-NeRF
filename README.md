@@ -12,7 +12,7 @@ python train.py --config configs/multiscale_google_56Leonard.txt
 ## Evaluation
 
 ```
-python train.py --config configs/eval_multiscale_google_56Leonard.txt
+python eval.py --config configs/eval_multiscale_google_56Leonard.txt
 ```
 
 ## Cite this work
