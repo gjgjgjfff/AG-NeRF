@@ -1,0 +1,34 @@
+### INPUT
+expname = eval_multiscale_google_56Leonard
+
+rootdir = /data2/gjf/AG-NeRF
+datadir = /data2/gjf/dataset
+ckpt_path = out/multiscale_google_56Leonard/model_002000.pth
+distributed = False
+
+## dataset
+eval_dataset = citynerf
+eval_scenes = multiscale_google_56Leonard
+
+### TESTING
+chunk_size = 2000
+
+### RENDERING
+N_importance = 64
+N_samples = 64
+inv_uniform = False
+det = False
+white_bkgd = False   
+
+### MODEL
+netdepth = 4
+netwidth = 64
+netdepth_fine = 4
+netwidth_fine = 64
+skips = [1]
+transformerdepth = 2
+
+factor = 4
+raw_noise_std = 0
+
+num_source_views = 10

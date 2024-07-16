@@ -1,0 +1,47 @@
+### INPUT  
+expname = multiscale_google_Transamerica
+
+rootdir = /data2/gjf/AG-NeRF
+datadir = /data2/gjf/dataset
+distributed = False
+
+## dataset
+train_dataset = citynerf
+train_scenes = multiscale_google_Transamerica
+
+### TRAINING
+N_rand = 2048
+lrate_feature = 0.001
+lrate_mlp = 0.0005
+lrate_decay_factor = 0.5
+lrate_decay_steps = 50000
+
+### TESTING
+chunk_size = 2000
+
+### RENDERING
+N_importance = 64
+N_samples = 64
+inv_uniform = False
+det = False
+white_bkgd = False
+
+### CONSOLE AND TENSORBOARD
+i_print = 100
+i_weights = 2000
+
+holdout = 16
+num_source_views = 6
+
+### MODEL
+netdepth = 4
+netwidth = 64
+netdepth_fine = 4
+netwidth_fine = 64
+skips = [1]
+transformerdepth = 2
+
+factor = 4
+raw_noise_std = 1e0
+
+multires = 10
